@@ -47,3 +47,6 @@
 
 변수로 만들기 
 - cmd + option + v
+
+선택영역 메서드로 추출하기
+- ctl + t -> Extract Method.. -> 변수명 입력
