@@ -96,6 +96,14 @@
 컨트롤러 @GetMapping("/"), 기본 화면으로 생성한 static/index.html
 - 우선 순위는 컨트롤러가 먼저 갖는다. 
 
+### H2 DB
+- h2 데이터베이스 버전은 스프링 부트 버전에 맞춘다.
+- 권한 주기: chmod 755 h2.sh 실행: ./h2.sh
+- 데이터베이스 파일 생성 방법
+    - jdbc:h2:~/test (최초 한번)
+    - ~/test.mv.db 파일 생성 확인
+    - 이후부터는 jdbc:h2:tcp://localhost/~/test 이렇게 접속
+
 ## 단축키
 
 파라미터 정보 툴팁 보기
