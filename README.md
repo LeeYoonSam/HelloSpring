@@ -114,8 +114,12 @@
 Service, Repository 에 @Autowired 를 사용해서 inject
 - interface 로 선언된 클래스를 사용
 
-  
 
+### 스프링 JdbcTemplate
+
+순수 Jdbc와 동일한 환경설정을 하면 된다.
+
+스프링 JdbcTemplate과 MyBatis 같은 라이브러리는 JDBC API에서 본 반복 코드를 대부분 제거해준 다. 하지만 SQL은 직접 작생해야 한다.
 
 ## 단축키
 
