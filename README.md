@@ -121,6 +121,23 @@ Service, Repository 에 @Autowired 를 사용해서 inject
 
 스프링 JdbcTemplate과 MyBatis 같은 라이브러리는 JDBC API에서 본 반복 코드를 대부분 제거해준 다. 하지만 SQL은 직접 작생해야 한다.
 
+
+### JPA
+- JPA는 기존의 반복 코드는 물론이고, 기본적인 SQL도 JPA가 직접 만들어서 실행해준다.
+- JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환을 할 수 있다. 
+- JPA를 사용하면 개발 생산성을 크게 높일 수 있다.
+
+Annotation
+- @Entity
+- @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    - DB가 알아서 생성해주는 것을 IDENTITY 라고 한다.
+- @Column()
+
+**참고사항**
+- JPA 를 사용하려면 EntityManager 를 주입 받아야 한다.
+- JPA 는 트랜잭션이 변경될때 
+
+
 ## 단축키
 
 파라미터 정보 툴팁 보기
