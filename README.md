@@ -127,7 +127,12 @@ Service, Repository 에 @Autowired 를 사용해서 inject
 - JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환을 할 수 있다. 
 - JPA를 사용하면 개발 생산성을 크게 높일 수 있다.
 
-Annotation
+**SpringConfig 설정**
+- show-sql : JPA가 생성하는 SQL을 출력한다.
+- ddl-auto : JPA는 테이블을 자동으로 생성하는 기능을 제공하는데 none 를 사용하면 해당 기능을 끈다.
+- create 를 사용하면 엔티티 정보를 바탕으로 테이블도 직접 생성해준다. 해보자.
+
+**Annotation**
 - @Entity
 - @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     - DB가 알아서 생성해주는 것을 IDENTITY 라고 한다.
@@ -135,7 +140,9 @@ Annotation
 
 **참고사항**
 - JPA 를 사용하려면 EntityManager 를 주입 받아야 한다.
-- JPA 는 트랜잭션이 변경될때 
+- `org.springframework.transaction.annotation.Transactional` 를 사용하자.
+- 스프링은 해당 클래스의 메서드를 실행할 때 트랜잭션을 시작하고, 메서드가 정상 종료되면 트랜잭션을 커 밋한다. 만약 런타임 예외가 발생하면 롤백한다.
+- JPA를 통한 모든 데이터 변경은 트랜잭션 안에서 실행해야 한다. 
 
 
 ## 단축키
